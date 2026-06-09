@@ -2,8 +2,9 @@
   "name": "claude-file-tokens",
   "displayName": "Claude File Token Counter",
   "description": "Count how many tokens the current file uses against the Claude API — on demand, from the status bar.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "offreal",
+  "icon": "assets/icon.png",
   "license": "MIT",
   "engines": {
     "vscode": "^1.85.0"
@@ -71,6 +72,7 @@
     "@anthropic-ai/sdk": "^0.40.0"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "@types/node": "^20.0.0",
     "@types/vscode": "^1.85.0",
     "@vscode/vsce": "^3.0.0",

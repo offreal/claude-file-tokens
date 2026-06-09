@@ -1,6 +1,7 @@
 .vscode/**
 .gitignore
 src/**
+assets/icon-src/**
 node_modules/**
 tsconfig.json
 esbuild.js

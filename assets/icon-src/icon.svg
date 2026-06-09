@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E89070"/><stop offset="1" stop-color="#B85C3E"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="128" height="128" rx="28" fill="url(#g1)" />
+  <!-- sheet -->
+  <g transform="rotate(-4 60 64)">
+    <rect x="28" y="22" width="56" height="80" rx="9" fill="#FCF9F2" />
+    <path d="M70 22 h14 v14 z" fill="#E7DECB"/>
+    <g stroke="#D9C9AE" stroke-width="5" stroke-linecap="round">
+      <line x1="38" y1="44" x2="64" y2="44"/>
+      <line x1="38" y1="56" x2="74" y2="56"/>
+      <line x1="38" y1="68" x2="70" y2="68"/>
+    </g>
+  </g>
+  <!-- count badge -->
+  <circle cx="92" cy="92" r="22" fill="#231F1D"/>
+  <circle cx="92" cy="92" r="22" fill="none" stroke="#FCF9F2" stroke-width="3"/>
+  <g stroke="#FCF9F2" stroke-width="4" stroke-linecap="round">
+    <line x1="89" y1="82" x2="85" y2="102"/>
+    <line x1="100" y1="82" x2="96" y2="102"/>
+    <line x1="81" y1="89" x2="103" y2="89"/>
+    <line x1="80" y1="96" x2="102" y2="96"/>
+  </g>
+</svg>
