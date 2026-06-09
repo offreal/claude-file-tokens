@@ -1,0 +1,80 @@
+{
+  "name": "claude-file-tokens",
+  "displayName": "Claude File Token Counter",
+  "description": "Count how many tokens the current file uses against the Claude API — on demand, from the status bar.",
+  "version": "0.1.0",
+  "publisher": "offreal",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "claude",
+    "tokens",
+    "anthropic",
+    "token count"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/offreal/claude-file-tokens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/offreal/claude-file-tokens/issues"
+  },
+  "homepage": "https://github.com/offreal/claude-file-tokens#readme",
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "claudeTokens.count",
+        "title": "Claude Tokens: Count Tokens in Current File"
+      },
+      {
+        "command": "claudeTokens.setApiKey",
+        "title": "Claude Tokens: Set API Key"
+      },
+      {
+        "command": "claudeTokens.detectModel",
+        "title": "Claude Tokens: Detect Model from Claude Code"
+      }
+    ],
+    "configuration": {
+      "title": "Claude File Token Counter",
+      "properties": {
+        "claudeTokens.model": {
+          "type": "string",
+          "default": "claude-opus-4-8",
+          "markdownDescription": "Model ID passed to the Claude token-counting endpoint. Token counts are model-specific, so this must match the model you care about. Current IDs include `claude-opus-4-8`, `claude-opus-4-7`, `claude-opus-4-6`, `claude-sonnet-4-6`, `claude-haiku-4-5`. Free-form string so new models work without updating the extension."
+        },
+        "claudeTokens.warnAboveBytes": {
+          "type": "number",
+          "default": 1048576,
+          "markdownDescription": "Ask for confirmation before sending content larger than this many bytes to the API. Set to `0` to disable the threshold."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "vscode:prepublish": "npm run compile",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.0.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.4.0"
+  }
+}
