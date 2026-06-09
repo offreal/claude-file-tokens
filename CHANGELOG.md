@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.4
+
+- Add the **AI** Marketplace category.
+- Require VS Code `^1.110.0` so the `claude` status-bar icon always renders.
+
 ## 0.1.3
 
 - Sharper short description shown in the Marketplace and search.
