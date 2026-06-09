@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2
+
+- Rewrite the README (features, getting-started, where to get an API key,
+  commands and settings tables) and add a demo GIF.
+- Add a Marketplace gallery banner.
+
 ## 0.1.1
 
 - Add an extension icon.
