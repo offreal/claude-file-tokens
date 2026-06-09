@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+- Sharper short description shown in the Marketplace and search.
+
 ## 0.1.2
 
 - Rewrite the README (features, getting-started, where to get an API key,

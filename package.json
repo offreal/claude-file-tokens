@@ -1,8 +1,8 @@
 {
   "name": "claude-file-tokens",
   "displayName": "Claude File Token Counter",
-  "description": "Count how many tokens the current file uses against the Claude API — on demand, from the status bar.",
-  "version": "0.1.2",
+  "description": "Exact Claude token counts for the current file — one click in the status bar.",
+  "version": "0.1.3",
   "publisher": "offreal",
   "icon": "assets/icon.png",
   "license": "MIT",
