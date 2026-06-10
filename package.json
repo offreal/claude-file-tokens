@@ -1,11 +1,12 @@
 {
   "name": "claude-file-tokens",
   "displayName": "Claude File Token Counter",
-  "description": "Exact Claude token counts for the current file — one click in the status bar.",
-  "version": "0.1.4",
+  "description": "Exact Claude token counts for the current file or selection — one click in the status bar.",
+  "version": "0.1.5",
   "publisher": "offreal",
   "icon": "assets/icon.png",
   "license": "MIT",
+  "packageManager": "pnpm@11.4.0",
   "engines": {
     "vscode": "^1.110.0"
   },
@@ -70,18 +71,27 @@
     "compile": "node esbuild.js",
     "watch": "node esbuild.js --watch",
     "vscode:prepublish": "npm run compile",
-    "package": "vsce package",
-    "publish": "vsce publish"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "package": "vsce package --no-dependencies",
+    "publish": "vsce publish --no-dependencies"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.40.0"
   },
   "devDependencies": {
-    "@resvg/resvg-js": "^2.6.2",
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
     "@types/node": "^20.0.0",
     "@types/vscode": "^1.85.0",
     "@vscode/vsce": "^3.0.0",
     "esbuild": "^0.24.0",
-    "typescript": "^5.4.0"
+    "eslint": "^10.4.1",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.4",
+    "typescript": "^5.4.0",
+    "typescript-eslint": "^8.61.0"
   }
 }

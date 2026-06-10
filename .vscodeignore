@@ -1,7 +1,11 @@
 .vscode/**
 .gitignore
+.prettierrc.json
+.prettierignore
+eslint.config.mjs
+pnpm-lock.yaml
+pnpm-workspace.yaml
 src/**
-assets/icon-src/**
 node_modules/**
 tsconfig.json
 esbuild.js

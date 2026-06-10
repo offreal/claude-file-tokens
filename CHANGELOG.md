@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.5
+
+- Fix a race where a count that finished after you switched editors or edited
+  text could overwrite the status bar with a stale number for the wrong file.
+- Internal: split the single source file into focused modules
+  (`statusBar`, `count`, `model`, `apiKey`, `config`) and encapsulate the
+  status bar behind a controller.
+- Tooling: add ESLint and Prettier, move to pnpm, drop the build-only
+  `@resvg/resvg-js` dependency and the icon-rendering scripts.
+
 ## 0.1.4
 
 - Add the **AI** Marketplace category.

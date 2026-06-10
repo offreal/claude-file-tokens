@@ -81,18 +81,18 @@ token count, character count, mode, and file name.
 
 ## Commands
 
-| Command | Description |
-| --- | --- |
-| **Claude Tokens: Count Tokens in Current File** | Count the active file/selection (also the status-bar click action). |
-| **Claude Tokens: Set API Key** | Store the Claude API key in SecretStorage. |
+| Command                                          | Description                                                                   |
+| ------------------------------------------------ | ----------------------------------------------------------------------------- |
+| **Claude Tokens: Count Tokens in Current File**  | Count the active file/selection (also the status-bar click action).           |
+| **Claude Tokens: Set API Key**                   | Store the Claude API key in SecretStorage.                                    |
 | **Claude Tokens: Detect Model from Claude Code** | Read `~/.claude.json` usage history for the current project and pick a model. |
 
 ## Settings
 
-| Setting | Default | Description |
-| --- | --- | --- |
-| `claudeTokens.model` | `claude-opus-4-8` | Model ID used for token counting. Free-form string, so new models work without an update. Current IDs include `claude-opus-4-8`, `claude-opus-4-7`, `claude-opus-4-6`, `claude-sonnet-4-6`, `claude-haiku-4-5`. |
-| `claudeTokens.warnAboveBytes` | `1048576` | Ask for confirmation before sending content larger than this many bytes. Set to `0` to disable. |
+| Setting                       | Default           | Description                                                                                                                                                                                                     |
+| ----------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `claudeTokens.model`          | `claude-opus-4-8` | Model ID used for token counting. Free-form string, so new models work without an update. Current IDs include `claude-opus-4-8`, `claude-opus-4-7`, `claude-opus-4-6`, `claude-sonnet-4-6`, `claude-haiku-4-5`. |
+| `claudeTokens.warnAboveBytes` | `1048576`         | Ask for confirmation before sending content larger than this many bytes. Set to `0` to disable.                                                                                                                 |
 
 ## What the number means
 
@@ -110,14 +110,20 @@ overhead, which honestly reflects how much actually goes to the model.
 ## Build from source
 
 ```bash
-npm install
-npm run compile      # bundle with esbuild
-npm run package      # build a .vsix
+pnpm install
+pnpm run compile      # bundle with esbuild
+pnpm run package      # build a .vsix
 ```
 
 Press `F5` in VS Code to launch an Extension Development Host with the extension
-loaded. The Marketplace icon is generated from `assets/icon-src/icon.svg` via
-`node assets/icon-src/render.js`.
+loaded.
+
+Lint and formatting:
+
+```bash
+pnpm run lint         # ESLint
+pnpm run format       # Prettier --write
+```
 
 ## License
 

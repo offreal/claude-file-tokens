@@ -1,0 +1,9 @@
+# Native postinstall scripts pnpm is allowed to run. esbuild needs its binary
+# for bundling; vsce-sign and keytar are used by vsce when publishing — keytar
+# reads the PAT stored by `vsce login` from the OS keychain.
+allowBuilds:
+  esbuild: true
+  "@vscode/vsce-sign": true
+  keytar: true
+minimumReleaseAgeExclude:
+  - prettier@3.8.4
