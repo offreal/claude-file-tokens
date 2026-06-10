@@ -2,7 +2,7 @@
   "name": "claude-file-tokens",
   "displayName": "Claude File Token Counter",
   "description": "Exact Claude token counts for the current file or selection — one click in the status bar.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "publisher": "offreal",
   "icon": "assets/icon.png",
   "license": "MIT",

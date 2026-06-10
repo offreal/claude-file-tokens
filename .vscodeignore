@@ -1,4 +1,5 @@
 .vscode/**
+.claude/**
 .gitignore
 .prettierrc.json
 .prettierignore

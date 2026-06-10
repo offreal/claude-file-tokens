@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.6
+
+- Packaging: exclude local editor config (`.claude/`) from the published
+  extension. No functional changes.
+
 ## 0.1.5
 
 - Fix a race where a count that finished after you switched editors or edited
